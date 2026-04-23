@@ -117,15 +117,45 @@ function initReveal() {
 }
 
 // ── CONTACT FORM ──
-function handleContact(e) {
+async function handleContact(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit span');
+
+  const form = e.target;
+  const btn = form.querySelector('.btn-submit span');
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
   btn.textContent = 'Enviando...';
+
+  try {
+    const res = await fetch("http://localhost:3000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (res.ok) {
+      btn.textContent = 'Mensaje enviado ✓';
+      form.reset();
+    } else {
+      btn.textContent = result.message || 'Error';
+    }
+
+  } catch (err) {
+    btn.textContent = 'Server error';
+  }
+
   setTimeout(() => {
-    btn.textContent = 'Mensaje enviado ✓';
-    e.target.reset();
-    setTimeout(() => { btn.textContent = 'Enviar mensaje'; }, 3000);
-  }, 1000);
+    btn.textContent = 'Enviar mensaje';
+  }, 3000);
 }
 
 // ── DENUNCIA FORM ──
