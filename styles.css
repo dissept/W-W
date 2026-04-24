@@ -279,10 +279,10 @@ section { padding: 120px 60px; }
 #companies { background: var(--black); }
 .companies-intro { margin-bottom: 60px; }
 .companies-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 24px;
 }
+
 .flip-hint {
   font-size: 11px;
   color: var(--text-muted);
@@ -678,4 +678,22 @@ footer {
   .flip-card { height: 200px; }
   .card-front-name { font-size: 20px; }
 
+}
+/* ── CAROUSEL ── */
+.carousel-track-container { overflow: hidden; width: 100%; }
+.carousel-track { display: flex; gap: 24px; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); }
+.flip-card { flex: 0 0 calc(33.333% - 16px); }
+.carousel-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 32px; }
+.carousel-dots { display: flex; gap: 8px; }
+.dot { width: 24px; height: 2px; background: rgba(184,146,46,0.25); cursor: pointer; transition: all 0.3s; }
+.dot.active { background: var(--gold); width: 40px; }
+.carousel-counter { font-size: 11px; letter-spacing: 3px; color: var(--text-muted); }
+.carousel-counter span { color: var(--gold); }
+.arrow { width: 44px; height: 44px; border: 1px solid rgba(184,146,46,0.3); background: transparent; cursor: pointer; color: var(--gold); font-size: 18px; transition: all 0.3s; }
+.arrow:hover { background: var(--gold); color: white; border-color: var(--gold); }
+.arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+.arrow:disabled:hover { background: transparent; color: var(--gold); }
+
+@media (max-width: 768px) {
+  .flip-card { flex: 0 0 100%; }
 }
