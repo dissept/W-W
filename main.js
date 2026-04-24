@@ -46,6 +46,7 @@ const companies = [
     location: "Gran Vía 73, Madrid",
     link: "amompra.html"
   },
+  
 ];
 
 // ── BUILD COMPANY CARDS ──
