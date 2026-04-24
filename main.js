@@ -64,7 +64,7 @@ function buildCompanyCards() {
     <div class="flip-card" id="card-${c.num}" onclick="toggleCard('${c.num}')">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          ${c.img ? `<img src="${c.img}" alt="${c.name}" style="width:48px;height:48px;object-fit:contain;margin-bottom:8px;opacity:0.85;">` : ''}
+          ${c.img ? `<img src="${c.img}" alt="${c.name}" style="width:140px;height:140px;object-fit:contain;margin-bottom:14px;margin-left:82px;opacity:0.85;">` : ''}
           <div class="card-front-name">${c.name}</div>
           <div class="card-front-sector">${c.sector}</div>
           <div class="card-front-cta">Ver más</div>
