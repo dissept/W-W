@@ -8,7 +8,7 @@ const app = express();
 // ✅ CORS
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+    origin: ["http://127.0.0.1:5500", "https://wiseandwisdom.netlify.app"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   }),
