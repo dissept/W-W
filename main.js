@@ -36,6 +36,7 @@ const companies = [
     num: "05",
     name: "Capital Investments Nabria",
     sector: "Financiero",
+    img: "nabria.png",
     desc: "Sociedad Anónima fundada en abril de 2025, especializada en actividades de intermediación en operaciones con valores y otros activos financieros.",
     location: "Gran Vía 73, Madrid"
   },
@@ -43,6 +44,7 @@ const companies = [
     num: "06",
     name: "Vehículos Tierra Mar y Aire",
     sector: "Automoción y Vehículos",
+    img: "VTAM.png",
     desc: "Especializada en la compraventa, importación, exportación y distribución de todo tipo de vehículos — automóviles, motocicletas, embarcaciones, aeronaves y maquinaria industrial, tanto nuevos como usados.",
     location: "Gran Vía 73, Madrid"
   },
@@ -50,6 +52,7 @@ const companies = [
     num: "07",
     name: "4 Welfare Capital Solutions",
     sector: "Inversión y Capital",
+    img: "4welfare.png",
     desc: "Constituida en enero de 2025, especializada en la adquisición, tenencia y gestión de participaciones sociales y acciones en entidades mercantiles. Vehículo de inversión estratégica del grupo.",
     location: "Gran Vía 73, Madrid"
   }
