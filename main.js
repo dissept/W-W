@@ -12,6 +12,7 @@ const companies = [
     num: "02",
     name: "Moprasa",
     sector: "Promoción Inmobiliaria",
+    img: "moprasa.png",
     desc: "Fundada en 1989, con más de 35 años de experiencia en la promoción, construcción y gestión de activos inmobiliarios en el corazón de Madrid.",
     location: "Gran Vía 73, Madrid",
     link: "moprasa.html"
@@ -20,6 +21,7 @@ const companies = [
     num: "03",
     name: "Amompra Inversiones",
     sector: "Inmobiliario",
+    img: "amompra.png",
     desc: "Constituida en 2004, especializada en la adquisición, alquiler y gestión de bienes inmuebles por cuenta propia en las ubicaciones más estratégicas de Madrid.",
     location: "Gran Vía 73, Madrid",
     link: "amompra.html"
@@ -28,6 +30,7 @@ const companies = [
     num: "04",
     name: "Invermompra",
     sector: "Inmobiliario",
+    img: "invermompra.png",
     desc: "Fundada en 2005, dedicada a la adquisición, venta, promoción, construcción y gestión de toda clase de bienes inmuebles y patrimonios en Madrid.",
     location: "Gran Vía 73, Madrid",
     link: "invermompra.html"
