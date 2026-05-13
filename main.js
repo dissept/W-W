@@ -168,7 +168,7 @@ async function handleContact(e) {
   const data = { name: form.name.value, email: form.email.value, message: form.message.value };
   btn.textContent = 'Enviando...';
   try {
-    const res = await fetch("http://localhost:3000/api/contact", {
+    const res = await fetch("https://w-w-production.up.railway.app/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
