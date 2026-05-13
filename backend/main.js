@@ -211,7 +211,7 @@ async function handleContact(e) {
   btn.textContent = "Enviando...";
   try {
     const res = await fetch(
-      "https://w-w-production.up.railway.app/api/denuncia",
+      "https://w-w-production.up.railway.app/api/contact",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
