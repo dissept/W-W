@@ -1,35 +1,18 @@
 const express = require("express");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 require("dotenv").config();
 
 const app = express();
-
-// ✅ CORS
-app.use(
-  cors({
-    origin: "http://127.0.0.1:5500",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
-  }),
-);
-
+app.use(cors());
 app.use(express.json());
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-// ROOT
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-// DATA
 const companyInfo = {
   name: "Wise & Wisdom SL",
   services: ["Marketing", "Consulting"],
@@ -84,46 +67,29 @@ const companies = [
   },
 ];
 
-// ROUTES
+app.get("/api/info", (req, res) => { res.json(companyInfo); });
+app.get("/api/companies", (req, res) => { res.json(companies); });
 
-app.get("/api/info", (req, res) => {
-  res.json(companyInfo);
-});
-
-app.get("/api/companies", (req, res) => {
-  res.json(companies);
-});
-
-// ✅ CONTACT FORM → EMAIL
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
   if (!name || !email || !message) {
     return res.status(400).json({ message: "Faltan datos" });
   }
-
   try {
-    await transporter.sendMail({
-      from: `"Web Contact" <peanol2020@gmail.com>`,
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
       to: "peanol2020@gmail.com",
       subject: `Nuevo mensaje de ${name}`,
-      html: `
-        <h3>Nuevo mensaje desde la web</h3>
-        <p><b>Nombre:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Mensaje:</b><br/> ${message}</p>
-      `,
+      html: `<h3>Nuevo mensaje desde la web</h3><p><b>Nombre:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Mensaje:</b><br/> ${message}</p>`,
     });
-
     console.log("📩 Email enviado correctamente");
-
     res.json({ message: "Mensaje enviado correctamente" });
   } catch (error) {
-    console.error("❌ Error enviando email:", error);
+    console.error("❌ Error:", error);
     res.status(500).json({ message: "Error del servidor" });
   }
 });
 
-// START SERVER
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
