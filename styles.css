@@ -616,6 +616,16 @@ footer {
   transition: color 0.3s;
 }
 .footer-links a:hover { color: var(--gold); }
+.footer-copy a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-copy a:hover {
+  color: var(--text-dark);
+}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
