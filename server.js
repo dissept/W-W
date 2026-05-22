@@ -90,6 +90,6 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listennn(3000)
   console.log("Server running on http://localhost:3000");
 });
