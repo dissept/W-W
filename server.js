@@ -92,8 +92,8 @@ app.post("/api/contact", async (req, res) => {
 
 
 app.post("/api/denuncia", async (req, res) => {
-  const { nombre, email, descripcion /* match your form field names */ } = req.body;
-  if (!nombre || !descripcion) {
+const { tipo, empresa, descripcion, contacto } = req.body;
+if (!tipo || !descripcion) {
     return res.status(400).json({ message: "Faltan datos" });
   }
   try {
