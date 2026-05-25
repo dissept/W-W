@@ -183,17 +183,32 @@ async function handleContact(e) {
 }
 
 // ── DENUNCIA FORM ──
-function handleDenuncia(e) {
+async function handleDenuncia(e) {
   e.preventDefault();
   const cb = document.getElementById('gdpr');
   if (!cb || !cb.checked) { alert('Por favor, acepte la política de privacidad para continuar.'); return; }
-  const btn = e.target.querySelector('.btn-submit span');
-  btn.textContent = 'Registrando...';
-  setTimeout(() => {
-    btn.textContent = 'Denuncia registrada ✓';
-    e.target.reset();
-    setTimeout(() => { btn.textContent = 'Enviar denuncia'; }, 4000);
-  }, 1200);
+  const form = e.target;
+  const btn = form.querySelector('.btn-submit span');
+  const data = {
+    tipo: form.tipo.value,
+    empresa: form.empresa.value,
+    descripcion: form.descripcion.value,
+    contacto: form.contacto.value
+  };
+  btn.textContent = 'Enviando...';
+  try {
+    const res = await fetch("https://w-w-production.up.railway.app/api/denuncia", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    btn.textContent = res.ok ? 'Denuncia enviada ✓' : (result.message || 'Error');
+    if (res.ok) form.reset();
+  } catch (err) {
+    btn.textContent = 'Server error';
+  }
+  setTimeout(() => { btn.textContent = 'Enviar denuncia'; }, 4000);
 }
 
 // ── INIT ──
