@@ -90,6 +90,28 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.listennn(3000)
+
+app.post("/api/denuncia", async (req, res) => {
+  const { nombre, email, descripcion /* match your form field names */ } = req.body;
+  if (!nombre || !descripcion) {
+    return res.status(400).json({ message: "Faltan datos" });
+  }
+  try {
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "anaberjano27@gmail.com@gmail.com",
+      subject: `Nueva denuncia de ${nombre}`,
+      html: `<h3>Nueva denuncia</h3><p><b>Nombre:</b> ${nombre}</p><p><b>Email:</b> ${email || 'No proporcionado'}</p><p><b>Descripción:</b><br/> ${descripcion}</p>`,
+    });
+    console.log("📩 Denuncia enviada correctamente");
+    res.json({ message: "Denuncia registrada correctamente" });
+  } catch (error) {
+    console.error("❌ Error:", error);
+    res.status(500).json({ message: "Error del servidor" });
+  }
+});
+
+
+app.listen(3000)
   console.log("Server running on http://localhost:3000");
 });

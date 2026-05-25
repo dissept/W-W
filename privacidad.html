@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — Wise & Wisdom</title>
+    <meta name="description" content="Política de Privacidad de Wise & Wisdom Strategic Business Management. Información sobre el tratamiento de datos personales conforme al RGPD y la LOPDGDD.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Wise & Wisdom Strategic Business Management">
+    <meta property="og:title" content="Política de Privacidad — Wise & Wisdom">
+    <meta property="og:description" content="Información sobre el tratamiento de datos personales conforme al RGPD y la LOPDGDD.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wiseandwisdom.net/privacidad.html">
+    <meta property="og:image" content="https://wiseandwisdom.net/W&W_Logo.png">
+    <meta property="og:locale" content="es_ES">
+    <link rel="canonical" href="https://wiseandwisdom.net/privacidad.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #B8922E;
+            --gold-light: #D4A840;
+            --gold-dark: #8B6914;
+            --silver: #6B7B8A;
+            --silver-light: #4A5568;
+            --black: #F7F4EF;
+            --dark: #FFFFFF;
+            --dark2: #F0EDE8;
+            --dark3: #E8E4DC;
+            --text: #1A1814;
+            --text-muted: #6B6560;
+            --white: #FAFAFA;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.15;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(247,244,239,0.98);
+            border-bottom: 1px solid rgba(184,146,46,0.2);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+        .nav-logo img { height: 48px; width: auto; }
+        .nav-back {
+            color: var(--silver-light);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-back:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 160px 60px 80px;
+            text-align: center;
+            position: relative;
+            background: var(--dark);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 50% 40%, rgba(184,146,46,0.08) 0%, transparent 65%),
+                radial-gradient(ellipse at 80% 80%, rgba(107,123,138,0.05) 0%, transparent 50%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-eyebrow {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(36px, 5vw, 60px);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 24px auto;
+        }
+        .hero .updated {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* ── CONTENT ── */
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 80px 40px 120px;
+        }
+
+        .content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 3.5vw, 36px);
+            font-weight: 300;
+            color: var(--text);
+            margin-top: 64px;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .content h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        .content h2:first-child { margin-top: 0; }
+
+        .section-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin-bottom: 32px;
+        }
+
+        .content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--silver-light);
+            margin-bottom: 16px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .content ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--silver-light);
+        }
+
+        .content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75em;
+            width: 6px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .content strong {
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .content a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(184,146,46,0.3);
+            transition: border-color 0.3s;
+        }
+        .content a:hover { border-bottom-color: var(--gold); }
+
+        .contact-box {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            padding: 32px 36px;
+            background: var(--dark);
+            border: 1px solid rgba(184,146,46,0.2);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .contact-box p {
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        .contact-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark2);
+            border-top: 1px solid rgba(184,146,46,0.2);
+            padding: 60px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-logo img { height: 36px; }
+        .footer-copy {
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+        .footer-links { display: flex; gap: 32px; }
+        .footer-links a {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            nav { padding: 16px 24px; }
+            .hero { padding: 120px 24px 60px; }
+            .content { padding: 60px 24px 80px; }
+            footer { padding: 40px 24px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+            .contact-box { padding: 24px 20px; }
+        }
+
+        @media (max-width: 380px) {
+            .content h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="https://wiseandwisdom.net/" class="nav-logo">
+        <img src="https://wiseandwisdom.net/W&W_Logo.png" alt="Wise & Wisdom">
+    </a>
+    <a href="https://wiseandwisdom.net/" class="nav-back">← Volver al inicio</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow">Legal</p>
+        <h1>Política de Privacidad</h1>
+        <div class="hero-divider"></div>
+        <p class="updated">Última actualización: 25 de mayo de 2026</p>
+    </div>
+</header>
+
+<main class="content">
+
+    <h2>1. Responsable del <em>tratamiento</em></h2>
+    <div class="section-line"></div>
+    <p><strong>Wise &amp; Wisdom Strategic Business Management</strong> (en adelante, &ldquo;Wise &amp; Wisdom&rdquo;), división de gestión estratégica de Grupo 777 Enterprises.</p>
+    <div class="contact-box">
+        <p><span class="contact-label">Dirección</span><br>Gran Vía 73, 28013 Madrid, España</p>
+        <br>
+        <p><span class="contact-label">Teléfono</span><br>+34 616 479 471</p>
+        <br>
+        <p><span class="contact-label">Email</span><br><a href="mailto:info@wiseandwisdom.net">info@wiseandwisdom.net</a></p>
+    </div>
+
+    <h2>2. Datos personales que <em>recopilamos</em></h2>
+    <div class="section-line"></div>
+    <p>Wise &amp; Wisdom recopila datos personales a través de los siguientes medios:</p>
+
+    <h3>Formulario de contacto</h3>
+    <p>Cuando usted nos envía una consulta a través del formulario de contacto de nuestra web, recogemos: nombre completo, dirección de correo electrónico, nombre de la empresa, asunto seleccionado y contenido del mensaje.</p>
+
+    <h3>Canal de denuncias</h3>
+    <p>Si utiliza nuestro canal de denuncias, recogemos: tipo de denuncia, empresa del grupo afectada, descripción de los hechos y, opcionalmente, sus datos de contacto. La denuncia puede realizarse de forma anónima.</p>
+
+    <h3>Datos de navegación y cookies</h3>
+    <p>Nuestro sitio web está alojado en Cloudflare, Inc., que puede recopilar automáticamente datos técnicos como la dirección IP, tipo de navegador, sistema operativo y datos de conexión con fines de seguridad, rendimiento y protección contra ataques.</p>
+    <p>Cloudflare puede establecer cookies técnicas estrictamente necesarias (como <strong>__cf_bm</strong>) para distinguir entre usuarios legítimos y bots. Estas cookies son esenciales para el funcionamiento y la seguridad del sitio web y no requieren consentimiento previo conforme al artículo 22.2 de la LSSI-CE, al ser cookies técnicas necesarias.</p>
+    <p>Wise &amp; Wisdom no utiliza cookies propias de analítica, publicidad ni seguimiento. En caso de que en el futuro se implementen, esta política será actualizada y se solicitará el consentimiento correspondiente.</p>
+
+    <h2>3. Finalidad del <em>tratamiento</em></h2>
+    <div class="section-line"></div>
+    <p>Tratamos sus datos personales para las siguientes finalidades:</p>
+    <ul>
+        <li>Atender y responder a sus consultas enviadas a través del formulario de contacto.</li>
+        <li>Gestionar y tramitar las comunicaciones recibidas a través del canal de denuncias, de conformidad con la Ley 2/2023, de 20 de febrero, reguladora de la protección de las personas que informen sobre infracciones normativas y de lucha contra la corrupción.</li>
+        <li>Garantizar la seguridad y el correcto funcionamiento del sitio web.</li>
+        <li>Cumplir con las obligaciones legales aplicables.</li>
+    </ul>
+
+    <h2>4. Base jurídica del <em>tratamiento</em></h2>
+    <div class="section-line"></div>
+    <ul>
+        <li><strong>Consentimiento (art. 6.1.a RGPD):</strong> Al enviar un formulario de contacto, usted presta su consentimiento para el tratamiento de los datos facilitados.</li>
+        <li><strong>Obligación legal (art. 6.1.c RGPD):</strong> En el caso del canal de denuncias, el tratamiento es necesario para el cumplimiento de la Ley 2/2023.</li>
+        <li><strong>Interés legítimo (art. 6.1.f RGPD):</strong> Para garantizar la seguridad del sitio web y la protección frente a ataques o accesos no autorizados.</li>
+    </ul>
+
+    <h2>5. Conservación de los <em>datos</em></h2>
+    <div class="section-line"></div>
+    <ul>
+        <li><strong>Formulario de contacto:</strong> Sus datos se conservarán durante el tiempo necesario para atender su consulta y, posteriormente, durante los plazos legales de prescripción aplicables.</li>
+        <li><strong>Canal de denuncias:</strong> Los datos se conservarán únicamente durante el tiempo imprescindible para la investigación de los hechos y, como máximo, durante tres meses desde la recepción de la comunicación, salvo que la finalidad de la conservación sea dejar evidencia del funcionamiento del sistema. Transcurrido dicho plazo, los datos serán anonimizados o suprimidos conforme a la Ley 2/2023.</li>
+        <li><strong>Datos de navegación:</strong> Los datos técnicos recogidos por Cloudflare se conservan conforme a la política de retención de datos de Cloudflare, Inc., generalmente por un período limitado necesario para garantizar la seguridad y el rendimiento del sitio.</li>
+    </ul>
+
+    <h2>6. Destinatarios de los <em>datos</em></h2>
+    <div class="section-line"></div>
+    <p>Sus datos personales no serán cedidos a terceros, salvo:</p>
+    <ul>
+        <li>Cuando sea necesario para el cumplimiento de una obligación legal.</li>
+        <li>Al Delegado de Gestión del Órgano de Compliance, en el caso de comunicaciones recibidas a través del canal de denuncias.</li>
+        <li>A proveedores de servicios que actúen como encargados de tratamiento, en particular Cloudflare, Inc. como proveedor de alojamiento y seguridad web, con el que se han suscrito las garantías contractuales exigidas por el RGPD.</li>
+    </ul>
+    <p>Nuestro sitio web está alojado en Cloudflare, Inc., con sede en Estados Unidos. Cloudflare puede tratar datos de navegación (como direcciones IP) en servidores ubicados fuera del Espacio Económico Europeo. Dichas transferencias se encuentran amparadas por las Cláusulas Contractuales Tipo (SCCs) aprobadas por la Comisión Europea, garantizando un nivel adecuado de protección conforme al RGPD. Puede consultar la política de privacidad de Cloudflare en: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>.</p>
+
+    <h2>7. Derechos del <em>usuario</em></h2>
+    <div class="section-line"></div>
+    <p>De acuerdo con el RGPD y la LOPDGDD, usted tiene derecho a:</p>
+    <ul>
+        <li><strong>Acceso:</strong> Conocer si tratamos sus datos personales y obtener una copia de los mismos.</li>
+        <li><strong>Rectificación:</strong> Solicitar la corrección de datos inexactos o incompletos.</li>
+        <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos cuando ya no sean necesarios para la finalidad para la que fueron recogidos.</li>
+        <li><strong>Limitación del tratamiento:</strong> Solicitar la restricción del tratamiento en determinadas circunstancias.</li>
+        <li><strong>Portabilidad:</strong> Recibir sus datos en un formato estructurado, de uso común y lectura mecánica.</li>
+        <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos en determinadas circunstancias.</li>
+        <li><strong>Revocación del consentimiento:</strong> Retirar su consentimiento en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.</li>
+    </ul>
+    <p>Para ejercer estos derechos, puede dirigirse a: <a href="mailto:info@wiseandwisdom.net">info@wiseandwisdom.net</a>, indicando su identidad y el derecho que desea ejercer.</p>
+    <p>Si considera que sus derechos no han sido debidamente atendidos, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, a través de su sitio web: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h2>8. Seguridad de los <em>datos</em></h2>
+    <div class="section-line"></div>
+    <p>Wise &amp; Wisdom ha adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de sus datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, conforme al estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos.</p>
+
+    <h2>9. Modificaciones de esta <em>política</em></h2>
+    <div class="section-line"></div>
+    <p>Wise &amp; Wisdom se reserva el derecho de modificar la presente Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta misma página con la fecha de última actualización. Le recomendamos revisarla periódicamente.</p>
+
+    <h2>10. <em>Contacto</em></h2>
+    <div class="section-line"></div>
+    <p>Para cualquier consulta relacionada con esta Política de Privacidad o con el tratamiento de sus datos personales:</p>
+    <div class="contact-box">
+        <p><span class="contact-label">Email</span><br><a href="mailto:info@wiseandwisdom.net">info@wiseandwisdom.net</a></p>
+        <br>
+        <p><span class="contact-label">Teléfono</span><br>+34 616 479 471</p>
+        <br>
+        <p><span class="contact-label">Dirección</span><br>Gran Vía 73, 28013 Madrid, España</p>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <a href="https://wiseandwisdom.net/" class="footer-logo">
+            <img src="https://wiseandwisdom.net/W&W_Logo.png" alt="Wise & Wisdom">
+        </a>
+        <p class="footer-copy">© 2026 Wise & Wisdom Strategic Business Management. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="https://wiseandwisdom.net/">Inicio</a>
+            <a href="https://wiseandwisdom.net/#contact">Contacto</a>
+            <a href="https://wiseandwisdom.net/#denuncia">Canal de denuncias</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
