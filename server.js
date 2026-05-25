@@ -92,16 +92,20 @@ app.post("/api/contact", async (req, res) => {
 
 
 app.post("/api/denuncia", async (req, res) => {
-const { tipo, empresa, descripcion, contacto } = req.body;
-if (!tipo || !descripcion) {
+  const { tipo, empresa, descripcion, contacto } = req.body;
+  if (!tipo || !descripcion) {
     return res.status(400).json({ message: "Faltan datos" });
   }
   try {
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "anaberjano27@gmail.com@gmail.com",
-      subject: `Nueva denuncia de ${nombre}`,
-      html: `<h3>Nueva denuncia</h3><p><b>Nombre:</b> ${nombre}</p><p><b>Email:</b> ${email || 'No proporcionado'}</p><p><b>Descripción:</b><br/> ${descripcion}</p>`,
+      to: "peanol2020@gmail.com",
+      subject: `Nueva denuncia: ${tipo}`,
+      html: `<h3>Nueva denuncia recibida</h3>
+        <p><b>Tipo:</b> ${tipo}</p>
+        <p><b>Empresa:</b> ${empresa || 'No especificada'}</p>
+        <p><b>Descripción:</b><br/> ${descripcion}</p>
+        <p><b>Contacto:</b> ${contacto || 'Anónimo'}</p>`,
     });
     console.log("📩 Denuncia enviada correctamente");
     res.json({ message: "Denuncia registrada correctamente" });
@@ -110,7 +114,6 @@ if (!tipo || !descripcion) {
     res.status(500).json({ message: "Error del servidor" });
   }
 });
-
 
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
