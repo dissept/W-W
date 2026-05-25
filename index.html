@@ -221,7 +221,7 @@
       <form class="denuncia-form" onsubmit="handleDenuncia(event)">
         <div class="form-group">
           <label>Tipo de denuncia</label>
-          <select>
+         <select name="tipo">
             <option value="">Seleccione el tipo</option>
             <option>Fraude o corrupción</option>
             <option>Acoso laboral o sexual</option>
@@ -233,7 +233,7 @@
         </div>
         <div class="form-group">
           <label>Empresa del grupo afectada</label>
-          <select>
+          <select name="empresa">
             <option value="">Seleccione la empresa</option>
             <option>Wise & Wisdom (Holding)</option>
             <option>Capital Investments Nabria</option>
@@ -244,11 +244,11 @@
         </div>
         <div class="form-group">
           <label>Descripción de los hechos</label>
-          <textarea style="min-height:160px;" placeholder="Describa los hechos de forma detallada. Incluya fechas, personas involucradas y cualquier evidencia disponible..."></textarea>
-        </div>
+          <textarea name="descripcion" style="min-height:160px;" placeholder="Describa los hechos de forma detallada. Incluya fechas, personas involucradas y cualquier evidencia disponible..."></textarea>
+  </div>
         <div class="form-group">
           <label>Datos de contacto (opcional — la denuncia puede ser anónima)</label>
-          <input type="text" placeholder="Nombre y email">
+         <input type="text" name="contacto" placeholder="Nombre y email">
         </div>
         <div class="gdpr-row">
           <input type="checkbox" id="gdpr">
