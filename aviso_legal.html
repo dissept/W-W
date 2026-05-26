@@ -30,10 +30,8 @@
             --text-muted: #6B6560;
             --white: #FAFAFA;
         }
-
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Montserrat', sans-serif;
             background: var(--black);
@@ -41,7 +39,6 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
-
         body::before {
             content: '';
             position: fixed;
@@ -51,189 +48,112 @@
             z-index: 9999;
             opacity: 0.15;
         }
-
         nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 20px 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between;
             background: rgba(247,244,239,0.98);
             border-bottom: 1px solid rgba(184,146,46,0.2);
             box-shadow: 0 2px 20px rgba(0,0,0,0.06);
         }
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-        }
+        .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
         .nav-logo img { height: 48px; width: auto; }
         .nav-back {
-            color: var(--silver-light);
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            transition: color 0.3s;
+            color: var(--silver-light); text-decoration: none;
+            font-size: 11px; font-weight: 500; letter-spacing: 2.5px;
+            text-transform: uppercase; transition: color 0.3s;
         }
         .nav-back:hover { color: var(--gold); }
-
         .hero {
-            padding: 160px 60px 80px;
-            text-align: center;
-            position: relative;
-            background: var(--dark);
+            padding: 160px 60px 80px; text-align: center;
+            position: relative; background: var(--dark);
         }
         .hero-bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background:
                 radial-gradient(ellipse at 50% 40%, rgba(184,146,46,0.08) 0%, transparent 65%),
                 radial-gradient(ellipse at 80% 80%, rgba(107,123,138,0.05) 0%, transparent 50%);
         }
         .hero-content { position: relative; z-index: 2; }
         .hero-eyebrow {
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 24px;
+            font-size: 10px; font-weight: 500; letter-spacing: 5px;
+            text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
         }
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(36px, 5vw, 60px);
-            font-weight: 300;
-            line-height: 1.1;
-            color: var(--text);
-            margin-bottom: 16px;
+            font-size: clamp(36px, 5vw, 60px); font-weight: 300;
+            line-height: 1.1; color: var(--text); margin-bottom: 16px;
         }
         .hero-divider {
-            width: 60px;
-            height: 1px;
+            width: 60px; height: 1px;
             background: linear-gradient(to right, transparent, var(--gold), transparent);
             margin: 24px auto;
         }
-        .hero .updated {
-            font-size: 12px;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-        }
-
-        .content {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 80px 40px 120px;
-        }
-
+        .hero .updated { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; }
+        .content { max-width: 760px; margin: 0 auto; padding: 80px 40px 120px; }
         .content h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(28px, 3.5vw, 36px);
-            font-weight: 300;
-            color: var(--text);
-            margin-top: 64px;
-            margin-bottom: 8px;
-            line-height: 1.2;
+            font-size: clamp(28px, 3.5vw, 36px); font-weight: 300;
+            color: var(--text); margin-top: 64px; margin-bottom: 8px; line-height: 1.2;
         }
         .content h2 em { font-style: italic; color: var(--gold); }
         .content h2:first-child { margin-top: 0; }
-
-        .section-line {
-            width: 40px;
-            height: 1px;
-            background: var(--gold);
-            margin-bottom: 32px;
+        .section-line { width: 40px; height: 1px; background: var(--gold); margin-bottom: 32px; }
+        .content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px; font-weight: 500; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--gold);
+            margin-top: 32px; margin-bottom: 12px;
         }
-
         .content p {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 19px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: var(--silver-light);
-            margin-bottom: 16px;
+            font-size: 19px; font-weight: 300; line-height: 1.8;
+            color: var(--silver-light); margin-bottom: 16px;
         }
-
-        .content strong {
-            color: var(--text);
-            font-weight: 400;
-        }
-
+        .content strong { color: var(--text); font-weight: 400; }
         .content a {
-            color: var(--gold);
-            text-decoration: none;
+            color: var(--gold); text-decoration: none;
             border-bottom: 1px solid rgba(184,146,46,0.3);
             transition: border-color 0.3s;
         }
         .content a:hover { border-bottom-color: var(--gold); }
-
         .contact-box {
-            margin-top: 24px;
-            margin-bottom: 16px;
-            padding: 32px 36px;
-            background: var(--dark);
-            border: 1px solid rgba(184,146,46,0.2);
+            margin-top: 24px; margin-bottom: 16px; padding: 32px 36px;
+            background: var(--dark); border: 1px solid rgba(184,146,46,0.2);
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
-
-        .contact-box p {
-            margin-bottom: 6px;
-            font-size: 17px;
-        }
+        .contact-box p { margin-bottom: 6px; font-size: 17px; }
         .contact-box p:last-child { margin-bottom: 0; }
-
         .contact-label {
             font-family: 'Montserrat', sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
+            font-size: 10px; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--text-muted);
         }
-
         .placeholder {
             background: rgba(184,146,46,0.1);
             border: 1px dashed rgba(184,146,46,0.4);
             padding: 2px 8px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            color: var(--gold-dark);
+            font-size: 13px; color: var(--gold-dark);
         }
-
         footer {
             background: var(--dark2);
             border-top: 1px solid rgba(184,146,46,0.2);
             padding: 60px;
         }
         .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 20px;
         }
         .footer-logo img { height: 36px; }
-        .footer-copy {
-            font-size: 11px;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-        }
+        .footer-copy { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
         .footer-links { display: flex; gap: 32px; }
         .footer-links a {
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
+            font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+            color: var(--text-muted); text-decoration: none; transition: color 0.3s;
         }
         .footer-links a:hover { color: var(--gold); }
-
         @media (max-width: 768px) {
             nav { padding: 16px 24px; }
             .hero { padding: 120px 24px 60px; }
@@ -243,10 +163,7 @@
             .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
             .contact-box { padding: 24px 20px; }
         }
-
-        @media (max-width: 380px) {
-            .content h2 { font-size: 24px; }
-        }
+        @media (max-width: 380px) { .content h2 { font-size: 24px; } }
     </style>
 </head>
 <body>
@@ -274,11 +191,11 @@
     <div class="section-line"></div>
     <p>En cumplimiento del art&iacute;culo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Informaci&oacute;n y de Comercio Electr&oacute;nico (LSSI-CE), se facilitan los siguientes datos:</p>
     <div class="contact-box">
-        <p><span class="contact-label">Titular</span><br>Wise &amp; Wisdom Strategic Business Management, divisi&oacute;n de gesti&oacute;n estrat&eacute;gica de Grupo 777 Enterprises.</p>
+        <p><span class="contact-label">Titular</span><br>Wise &amp; Wisdom, S.L.</p>
         <br>
-        <p><span class="contact-label">CIF / NIF</span><br><span class="placeholder">B26593442</span></p>
+        <p><span class="contact-label">CIF</span><br>B26593442</p>
         <br>
-        <p><span class="contact-label">Domicilio</span><br>Gran V&iacute;a 73, 28013 Madrid, Espa&ntilde;a</p>
+        <p><span class="contact-label">Domicilio social</span><br>Gran V&iacute;a 73, 28013 Madrid, Espa&ntilde;a</p>
         <br>
         <p><span class="contact-label">Tel&eacute;fono</span><br>+34 616 479 471</p>
         <br>
@@ -287,14 +204,17 @@
         <p><span class="contact-label">Sitio web</span><br><a href="https://wiseandwisdom.net">wiseandwisdom.net</a></p>
     </div>
 
+    <h3>Autorizaci&oacute;n administrativa previa</h3>
+    <p>La actividad de Wise &amp; Wisdom, S.L. no est&aacute; sujeta a autorizaci&oacute;n administrativa previa.</p>
+
     <h2>2. Objeto del <em>sitio web</em></h2>
     <div class="section-line"></div>
     <p>Este sitio web tiene como finalidad ofrecer informaci&oacute;n corporativa sobre Wise &amp; Wisdom y las empresas del grupo, facilitar v&iacute;as de contacto y poner a disposici&oacute;n un canal de denuncias conforme a la Ley 2/2023.</p>
 
     <h2>3. Propiedad intelectual e <em>industrial</em></h2>
     <div class="section-line"></div>
-    <p>Todos los contenidos de este sitio web &mdash; textos, im&aacute;genes, logotipos, dise&ntilde;o gr&aacute;fico, c&oacute;digo fuente y estructura de navegaci&oacute;n &mdash; son propiedad de Wise &amp; Wisdom o de sus leg&iacute;timos titulares y est&aacute;n protegidos por la legislaci&oacute;n espa&ntilde;ola e internacional sobre propiedad intelectual e industrial.</p>
-    <p>Queda prohibida su reproducci&oacute;n, distribuci&oacute;n, transformaci&oacute;n o comunicaci&oacute;n p&uacute;blica, total o parcial, sin autorizaci&oacute;n expresa y por escrito de Wise &amp; Wisdom.</p>
+    <p>Todos los contenidos de este sitio web &mdash; textos, im&aacute;genes, logotipos, dise&ntilde;o gr&aacute;fico, c&oacute;digo fuente y estructura de navegaci&oacute;n &mdash; son propiedad de Wise &amp; Wisdom, S.L. o de sus leg&iacute;timos titulares y est&aacute;n protegidos por la legislaci&oacute;n espa&ntilde;ola e internacional sobre propiedad intelectual e industrial.</p>
+    <p>Queda prohibida su reproducci&oacute;n, distribuci&oacute;n, transformaci&oacute;n o comunicaci&oacute;n p&uacute;blica, total o parcial, sin autorizaci&oacute;n expresa y por escrito de Wise &amp; Wisdom, S.L.</p>
 
     <h2>4. Condiciones de <em>uso</em></h2>
     <div class="section-line"></div>
@@ -302,12 +222,12 @@
 
     <h2>5. Exclusi&oacute;n de <em>responsabilidad</em></h2>
     <div class="section-line"></div>
-    <p>Wise &amp; Wisdom no garantiza la disponibilidad continua ni la ausencia de errores en los contenidos del sitio web, aunque adoptar&aacute; las medidas razonables para mantenerlo actualizado y libre de inexactitudes.</p>
-    <p>Wise &amp; Wisdom no se responsabiliza de los da&ntilde;os derivados del uso del sitio web, de la imposibilidad de acceso o de errores u omisiones en sus contenidos.</p>
+    <p>Wise &amp; Wisdom, S.L. no garantiza la disponibilidad continua ni la ausencia de errores en los contenidos del sitio web, aunque adoptar&aacute; las medidas razonables para mantenerlo actualizado y libre de inexactitudes.</p>
+    <p>Wise &amp; Wisdom, S.L. no se responsabiliza de los da&ntilde;os derivados del uso del sitio web, de la imposibilidad de acceso o de errores u omisiones en sus contenidos.</p>
 
     <h2>6. Enlaces a <em>terceros</em></h2>
     <div class="section-line"></div>
-    <p>Este sitio web puede contener enlaces a p&aacute;ginas de terceros. Wise &amp; Wisdom no controla ni se responsabiliza de los contenidos, pol&iacute;ticas de privacidad o pr&aacute;cticas de dichos sitios externos.</p>
+    <p>Este sitio web puede contener enlaces a p&aacute;ginas de terceros. Wise &amp; Wisdom, S.L. no controla ni se responsabiliza de los contenidos, pol&iacute;ticas de privacidad o pr&aacute;cticas de dichos sitios externos.</p>
 
     <h2>7. Legislaci&oacute;n aplicable y <em>jurisdicci&oacute;n</em></h2>
     <div class="section-line"></div>
@@ -331,7 +251,7 @@
         <a href="https://wiseandwisdom.net/" class="footer-logo">
             <img src="https://wiseandwisdom.net/W&W_Logo.png" alt="Wise & Wisdom">
         </a>
-        <p class="footer-copy">&copy; 2026 Wise &amp; Wisdom Strategic Business Management. Todos los derechos reservados.</p>
+        <p class="footer-copy">&copy; 2026 Wise &amp; Wisdom, S.L. Todos los derechos reservados.</p>
         <div class="footer-links">
             <a href="https://wiseandwisdom.net/">Inicio</a>
             <a href="/privacidad.html">Privacidad</a>
