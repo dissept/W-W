@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Canal de denuncias confidencial de Wise & Wisdom Strategic Business Management. Comunique conductas irregulares de forma segura y anónima conforme a la Ley 2/2023.">
+  <meta name="keywords" content="canal de denuncias, whistleblowing, compliance, Wise and Wisdom, Ley 2/2023, denuncia confidencial">
+  <meta name="author" content="Wise & Wisdom Strategic Business Management">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wiseandwisdom.net/denuncia.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Canal de Denuncias — Wise & Wisdom">
+  <meta property="og:description" content="Canal confidencial y seguro para comunicar conductas irregulares conforme a la Ley 2/2023.">
+  <meta property="og:url" content="https://wiseandwisdom.net/denuncia.html">
+  <meta property="og:image" content="https://wiseandwisdom.net/W&W_Logo.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Wise & Wisdom">
+
+  <title>Canal de Denuncias — Wise & Wisdom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo">
+      <img src="W&W_Logo.png" alt="Wise & Wisdom">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Nosotros</a></li>
+      <li><a href="index.html#companies">Empresas</a></li>
+      <li><a href="index.html#contact">Contacto</a></li>
+      <li><a href="denuncia.html" style="color: var(--gold);">Canal de denuncias</a></li>
+    </ul>
+  </nav>
+
+  <!-- SPACER for fixed nav -->
+  <div style="height: 100px;"></div>
+
+  <!-- WHISTLEBLOWER -->
+  <section id="denuncia" style="min-height: calc(100vh - 100px); display: flex; align-items: center;">
+    <div class="container">
+      <div class="denuncia-inner reveal visible">
+        <p class="section-eyebrow">Transparencia</p>
+        <h2 class="section-title">Canal de <em>denuncias</em></h2>
+        <div class="gold-line" style="margin: 0 auto 40px;"></div>
+
+        <div class="denuncia-badge">🔒 Canal confidencial y seguro</div>
+
+        <p>
+          Wise &amp; Wisdom está comprometida con la ética, la integridad y el cumplimiento normativo.
+          Este canal permite comunicar de forma confidencial cualquier conducta irregular, incumplimiento
+          legal o comportamiento contrario a nuestros valores corporativos.
+        </p>
+
+        <p style="font-size:14px; color: var(--text-muted); font-family: 'Montserrat', sans-serif; margin-bottom: 0;">
+          Todas las comunicaciones son tratadas con absoluta confidencialidad y de conformidad con la
+          Ley 2/2023 de protección de personas que informen sobre infracciones normativas (Ley Whistleblowing).
+        </p>
+
+        <form class="denuncia-form" onsubmit="handleDenuncia(event)">
+          <div class="form-group">
+            <label>Tipo de denuncia</label>
+            <select name="tipo">
+              <option value="">Seleccione el tipo</option>
+              <option>Fraude o corrupción</option>
+              <option>Acoso laboral o sexual</option>
+              <option>Incumplimiento normativo</option>
+              <option>Conflicto de intereses</option>
+              <option>Protección de datos</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Empresa del grupo afectada</label>
+            <select name="empresa">
+              <option value="">Seleccione la empresa</option>
+              <option>Wise & Wisdom (Holding)</option>
+              <option>Capital Investments Nabria</option>
+              <option>Vehiculos Tierra Mar y Aire</option>
+              <option>4 Welfare Capital Solutions</option>
+              <option>No lo sé / General</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Descripción de los hechos</label>
+            <textarea name="descripcion" style="min-height:160px;" placeholder="Describa los hechos de forma detallada. Incluya fechas, personas involucradas y cualquier evidencia disponible..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Datos de contacto (opcional — la denuncia puede ser anónima)</label>
+            <input type="text" name="contacto" placeholder="Nombre y email">
+          </div>
+
+          <div class="gdpr-row">
+            <input type="checkbox" id="gdpr">
+            <label for="gdpr">
+              Confirmo que la información proporcionada es veraz y acepto la
+              <a href="privacidad.html">política de privacidad</a> y el tratamiento de mis datos
+              conforme al RGPD y la LOPDGDD.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit"><span>Enviar denuncia</span></button>
+
+          <p class="denuncia-note">
+            Su denuncia será recibida por el Delegado de Gestión del Órgano de Compliance.
+            Recibirá acuse de recibo en un plazo máximo de 7 días hábiles.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="W&W_Logo.png" alt="Wise & Wisdom">
+      </div>
+      <div class="footer-copy">
+        © 2026 Wise & Wisdom Strategic Business Management. Todos los derechos reservados.
+      </div>
+      <div class="footer-links">
+        <a href="aviso_legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="denuncia.html">Canal de denuncias</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── NAV SCROLL ──
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── DENUNCIA FORM ──
+    async function handleDenuncia(e) {
+      e.preventDefault();
+      const cb = document.getElementById('gdpr');
+      if (!cb || !cb.checked) { alert('Por favor, acepte la política de privacidad para continuar.'); return; }
+      const form = e.target;
+      const btn = form.querySelector('.btn-submit span');
+      const data = {
+        tipo: form.tipo.value,
+        empresa: form.empresa.value,
+        descripcion: form.descripcion.value,
+        contacto: form.contacto.value
+      };
+      btn.textContent = 'Enviando...';
+      try {
+        const res = await fetch("https://w-w-production.up.railway.app/api/denuncia", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        btn.textContent = res.ok ? 'Denuncia enviada ✓' : (result.message || 'Error');
+        if (res.ok) form.reset();
+      } catch (err) {
+        btn.textContent = 'Server error';
+      }
+      setTimeout(() => { btn.textContent = 'Enviar denuncia'; }, 4000);
+    }
+  </script>
+
+</body>
+</html>
