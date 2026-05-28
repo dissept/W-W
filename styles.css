@@ -513,7 +513,7 @@ section {
   display: flex;
   gap: 20px;
   margin-bottom: 32px;
-  align-items: flex-start;
+  align-items: center;
 }
 .contact-icon {
   width: 40px;
@@ -655,7 +655,7 @@ section {
 }
 .gdpr-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding: 16px;
   background: rgba(184, 146, 46, 0.05);
@@ -877,7 +877,11 @@ footer {
 }
 .carousel-controls {
   display: flex;
+<<<<<<< HEAD
   align-items: flex-start;
+=======
+  align-items: center;
+>>>>>>> f76277d (fix: align-items corrections)
   justify-content: space-between;
   margin-top: 32px;
 }
