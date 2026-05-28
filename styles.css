@@ -390,8 +390,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 32px;
+  align-items: flex-start;
   transition: border-color 0.3s;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
