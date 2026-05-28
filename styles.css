@@ -389,7 +389,7 @@ section {
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   transition: border-color 0.3s;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
