@@ -340,6 +340,7 @@ section {
 .companies-grid {
   display: flex;
   gap: 24px;
+  overflow: hidden;
 }
 
 .flip-hint {
@@ -388,8 +389,8 @@ section {
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   transition: border-color 0.3s;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
@@ -805,7 +806,7 @@ footer {
     gap: 48px;
   }
   .flip-card {
-    height: 380px;
+    height: 300px;
   }
   .footer-inner {
     flex-direction: column;
