@@ -1,4 +1,4 @@
-// ── COMPANY DATA ──
+// COMPANY DATA ──
 const companies = [
   {
     num: "01",
