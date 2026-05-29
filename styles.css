@@ -421,20 +421,20 @@ section {
 }
 .card-front-name {
   font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--gold);
   margin-bottom: 8px;
 }
 .card-front-sector {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--gold-dark);
   margin-bottom: 12px;
 }
 .card-front-cta {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -855,13 +855,13 @@ footer {
 /* ── EXTRA SMALL ── */
 @media (max-width: 380px) {
   .hero-title {
-    font-size: 32px;
+    font-size: px;
   }
   .section-title {
-    font-size: 28px;
+    font-size: 30px;
   }
   .card-front-name {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 /* ── CAROUSEL ── */
