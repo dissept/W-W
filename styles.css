@@ -704,10 +704,13 @@ footer {
   font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 1px;
+  padding-left: 24px;
 }
 .footer-links {
   display: flex;
   gap: 32px;
+  width: 100%;
+  justify-content: center;
 }
 .footer-links a {
   font-size: 10px;
