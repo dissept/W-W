@@ -855,7 +855,7 @@ footer {
 /* ── EXTRA SMALL ── */
 @media (max-width: 380px) {
   .hero-title {
-    font-size: px;
+    font-size: 32px;
   }
   .section-title {
     font-size: 30px;
