@@ -421,20 +421,20 @@ section {
 }
 .card-front-name {
   font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--gold);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .card-front-sector {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--gold-dark);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .card-front-cta {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-muted);
