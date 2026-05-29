@@ -72,7 +72,7 @@ function buildCompanyCards() {
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <div class="card-front-img-wrap" style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;">
-            ${c.img ? `<img src="${c.img}" alt="${c.name}" style="width:160px;height:160px;object-fit:contain;opacity:0.85;">` : ""}
+            ${c.img ? `<img src="${c.img}" alt="${c.name}" style="width:170px;height:170px;object-fit:contain;opacity:0.85;">` : ""}
           </div>
           <div class="card-front-name">${c.name}</div>
           <div class="card-front-sector">${c.sector}</div>
