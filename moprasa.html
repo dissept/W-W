@@ -231,14 +231,11 @@
         };
         btn.textContent = "Enviando...";
         try {
-          const res = await fetch(
-            "https://w-w-production.up.railway.app/api/contact",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
-            },
-          );
+          const res = await fetch("https://formspree.io/f/maqkrbka", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
           btn.textContent = res.ok ? "Enviado ✓" : "Error";
           if (res.ok) form.reset();
         } catch {
