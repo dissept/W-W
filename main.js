@@ -236,14 +236,11 @@ async function handleContact(e) {
   };
   btn.textContent = "Enviando...";
   try {
-    const res = await fetch(
-      "https://w-w-production.up.railway.app/api/contact",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      },
-    );
+    const res = await fetch("https://formspree.io/f/maqkrbka", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
     const result = await res.json();
     btn.textContent = res.ok ? "Mensaje enviado ✓" : result.message || "Error";
     if (res.ok) form.reset();
