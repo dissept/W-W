@@ -211,7 +211,7 @@ async function handleContact(e) {
   btn.textContent = "Enviando...";
   try {
     const res = await fetch(
-      "https://w-w-production.up.railway.app/api/contact",
+      "https://ww-backend.anaberjano27.workers.dev/api/contact",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -252,7 +252,7 @@ async function handleDenuncia(e) {
   btn.textContent = "Registrando...";
   try {
     const res = await fetch(
-      "https://w-w-production.up.railway.app/api/denuncia",
+      "https://ww-backend.anaberjano27.workers.dev/api/denuncia",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
