@@ -1,0 +1,11 @@
+name = "ww-backend"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+crons = ["0 2 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ww-submissions"
+database_id = "14fbdd8a-05c2-4a74-8261-3ef6db00668f"

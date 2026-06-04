@@ -1,0 +1,67 @@
+export const companyInfo = {
+  name: "Wise & Wisdom SL",
+  services: ["Marketing", "Consulting"],
+  email: "administracion_grupo777@777.enterprises",
+};
+
+export const companies = [
+  {
+    num: "01",
+    name: "Edificaciones Valdeon",
+    sector: "Inmobiliario",
+    img: "EV_logo.jpg",
+    desc: "Empresa fundada en 1968, con más de 56 años de trayectoria en el sector inmobiliario madrileño. Especializada en el alquiler y administración de bienes inmuebles por cuenta propia. La empresa más veterana del grupo.",
+    location: "Av. del Valle 15, Madrid",
+  },
+  {
+    num: "02",
+    name: "Moprasa",
+    sector: "Promoción Inmobiliaria",
+    img: "moprasa.png",
+    desc: "Fundada en 1989, con más de 35 años de experiencia en la promoción, construcción y gestión de activos inmobiliarios en el corazón de Madrid.",
+    location: "Gran Vía 73, Madrid",
+    link: "moprasa.html",
+  },
+  {
+    num: "03",
+    name: "Amompra Inversiones",
+    sector: "Inmobiliario",
+    img: "amompra.png",
+    desc: "Constituida en 2004, especializada en la adquisición, alquiler y gestión de bienes inmuebles por cuenta propia en las ubicaciones más estratégicas de Madrid.",
+    location: "Gran Vía 73, Madrid",
+    link: "amompra.html",
+  },
+  {
+    num: "04",
+    name: "Invermompra",
+    sector: "Inmobiliario",
+    img: "innova.png",
+    desc: "Fundada en 2005, dedicada a la adquisición, venta, promoción, construcción y gestión de toda clase de bienes inmuebles y patrimonios en Madrid.",
+    location: "Gran Vía 73, Madrid",
+    link: "invermompra.html",
+  },
+  {
+    num: "05",
+    name: "Capital Investments Nabria",
+    sector: "Financiero",
+    img: "nabria.png",
+    desc: "Sociedad Anónima fundada en abril de 2025, especializada en actividades de intermediación en operaciones con valores y otros activos financieros.",
+    location: "Gran Vía 73, Madrid",
+  },
+  {
+    num: "06",
+    name: "Vehículos Tierra Mar y Aire",
+    sector: "Automoción y Vehículos",
+    img: "VTAM.png",
+    desc: "Especializada en la compraventa, importación, exportación y distribución de todo tipo de vehículos — automóviles, motocicletas, embarcaciones, aeronaves y maquinaria industrial, tanto nuevos como usados.",
+    location: "Gran Vía 73, Madrid",
+  },
+  {
+    num: "07",
+    name: "4 Welfare Capital Solutions",
+    sector: "Inversión y Capital",
+    img: "4welfare.png",
+    desc: "Constituida en enero de 2025, especializada en la adquisición, tenencia y gestión de participaciones sociales y acciones en entidades mercantiles. Vehículo de inversión estratégica del grupo.",
+    location: "Gran Vía 73, Madrid",
+  },
+];
